@@ -1,6 +1,20 @@
 #include <iostream>
 using namespace std;
 
+// here what happens parents class ka pointer child class ke object ko point kr skta hai
+// Abstract class is only used to show for privacy
+// uski sb class ke andar saara business logic hot hai
+
+// An abstract class is a class that cannot be instantiated (cannot create objects directly) and
+//  is used as a blueprint for other classes.
+
+//  It creates methods without implementation
+// The child class must implement the abstract methods. 
+
+// means abstract class wo class hoti jime method initialise krte hai but without implementation 
+// and iski child class usko extend krti & uske methods implement krti hai
+
+// INTERFACE 
 
 class Car{
     public :

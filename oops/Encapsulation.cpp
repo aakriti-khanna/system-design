@@ -1,6 +1,11 @@
 #include <iostream>
 using namespace std;
 
+// Enacpsulation 
+// provides data security using access modifiers
+// and can acess by using getter func & setter func
+
+
 
 // No need of creating a Parent class in  Encapsulation 
 
@@ -9,7 +14,7 @@ using namespace std;
 //     virtual void startEngine() =0;
 //     virtual void shiftGear( int gear) =0;
 //     virtual void accelerate() =0;
-//     virtual void brake() =0;
+//     virtual void brake() =0; 
 //     virtual void stopEngine() =0;
 //     virtual ~Car() {};
 
@@ -17,9 +22,15 @@ using namespace std;
 
 
 //   Encapsulation  Class
+// Encapsulation means wrapping data (variables) and the methods that operate on that data inside a class,
+//  while restricting direct access to the data.
+
+// Like we use in env variables in ecomm code by using of getter function to fetch the var
+// and if we need to change the value we use setter functions but with certain validations
 class SuperCar {
     // change this to Private since we can't directly access these parameter
  private: 
+  
     string brand;
     string model;
     bool isEngineOn;
@@ -28,6 +39,7 @@ class SuperCar {
     string tyre;
     //  used constructor for the same
 public:
+//  these are methods which have been implemented
     SuperCar ( string b,  string m) {
      this->brand=b;
      this->model=m;
@@ -52,9 +64,10 @@ string  getTyre(){
  return this->tyre;
 }
 
-var setTyre(string tyre){
-    this.tyre = tyre
+void setTyre(string tyre){
+    this->tyre = tyre;
 }
+
 void shiftGear(int gear){
     if (!isEngineOn){
     cout<<brand << " " <<model <<" Engine : can't shift gear "<<'\n';
@@ -89,13 +102,13 @@ void stopEngine(){
 
 }
 
-
+  ~SuperCar(){}
 };
 
 
 int main(){
 
-    Car *myCar=  new SuperCar("ford","Mustang");
+    SuperCar *myCar=  new SuperCar("ford","Mustang");
     myCar->startEngine();
     myCar->shiftGear(1);
     myCar->accelerate();
@@ -108,9 +121,10 @@ int main(){
     //  myCar->currentSpeed=500
 
     // cout<< "Curr speed of my super car"<<myCar->currentSpeed <<endl;
-    
-    cout<<myCar->setTyre("hello")
 
+   cout << "Current Speed: " << myCar->getCurrentSpeed() << endl;
+   myCar->setTyre(" Pop");
+   cout << "helo tyre"<< myCar->getTyre();
     delete myCar;
 
     return 0;

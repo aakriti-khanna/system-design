@@ -43,7 +43,7 @@ void accelerate(){
   cout<<brand << " " <<model <<" : Accelerate to " << currentSpeed <<"km/h" << '\n';
 }
 
-void brake(){
+void brake(){ 
      currentSpeed-=20;
      if (currentSpeed<0){
         currentSpeed=0;
@@ -77,7 +77,7 @@ class ManualCar : public Car {
         cout<<brand << " " <<model <<" shifted gear"<<'\n';
     }
 };
-
+ 
 class ElectricCar : public Car {
 private: 
     int battery;

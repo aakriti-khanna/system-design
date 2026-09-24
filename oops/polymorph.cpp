@@ -1,3 +1,18 @@
+// Polymorphism
+//creation of object in diffrent forms
+// static Poly
+// Method Overloading
+// in c++  function name should be same , parameter & return type can differ
+// Dynamic Poly
+// Method Overriding
+// in c++  function name should be same , parameter ,return type should be same 
+// business logic will also differ according to the class type  
+
+
+
+// Method 
+
+
 #include <iostream>
 using namespace std;
 
